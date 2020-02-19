@@ -23,7 +23,7 @@ Request Body :
 }
 ```
 
-**title**: search keyword for game title. Can have space and special character(although will be removed when querying database). Ignorant to cases.
+**title**: search keyword for game title. Can have space and special character(although will be removed when querying database). **case sensitive**.
 
 **subgenre**: full spelling name of the genre. ex. "Action", "Casino".
 
