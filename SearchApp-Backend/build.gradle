@@ -13,6 +13,13 @@ repositories {
 }
 
 dependencies {
+	repositories {
+    		mavenCentral()
+	}
+	dependencies {
+    		testImplementation "junit:junit:4.12"
+	}
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'org.postgresql:postgresql'
@@ -23,4 +30,34 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+apply plugin: 'java'
+// This plugin has a predefined 'run' task that we can reuse to use Gradle to execute our application
+apply plugin: 'application'
+
+task compile(type: JavaCompile) {
+  classpath = sourceSets.main.compileClasspath
+  classpath += sourceSets.test.runtimeClasspath
+  sourceSets.test.java.outputDir = file('build/bin')
+  sourceSets.main.java.outputDir = file('build/bin')
+}
+
+mainClassName='searchapp.SearchAppApplication'
+
+jar {
+  destinationDir=file('distributable')
+  manifest {
+    // It is smart to reuse the name of the main class variable instead of hardcoding it
+    attributes "Main-Class": "$mainClassName"
+  }
+}
+
+sourceSets {
+  main {
+    java { srcDir 'src/main/java' }
+  }
+  test {
+    java { srcDir 'src/test/java'}
+  }
 }
