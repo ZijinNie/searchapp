@@ -22,6 +22,15 @@ Request Body :
   "ratingSort":"[DEFAULT|ASC|DESC]"
 }
 ```
+example:
+
+```
+{
+  "title": "",
+  "subgenre": "Action",
+  "ratingSort":"DESC"
+}
+```
 
 **title**: search keyword for game title. Can have space and special character(although will be removed when querying database). **case sensitive**.
 
