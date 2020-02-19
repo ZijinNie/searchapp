@@ -1,16 +1,13 @@
 # searchapp
 
 This is the backend of a game information search application. Support RESTful api query.
-Language: Java  Framework: Spring Boot  Build: Gradle
+Language: Java  Framework: Spring Boot  Build: Gradle Deploy: Heroku
 
 ***To Run It***
 
-In root folder, use command 
-```
-java -jar SearchApp-Backend/build/libs/SearchApp-Backend-0.0.1-SNAPSHOT.jar
-```
 
-Use POSTMAN or whatever RESTful client, send **POST** request to `http://127.0.0.1:8080/search`
+
+Use POSTMAN or whatever RESTful client, send **POST** request to `https://searchapp-backend.herokuapp.com/`
 
 Request Path: ` /search ` 
 
