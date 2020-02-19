@@ -1,0 +1,1 @@
+web: java -jar SearchApp-Backend/build/libs/SearchApp-Backend-0.0.1-SNAPSHOT.jar
