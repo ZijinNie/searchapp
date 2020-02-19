@@ -19,7 +19,7 @@ Request Body :
 {
   "title": "TITLE_KEYWORD",
   "subgenre": "SUBGENRE_FULL_NAME",
-  "ratingSort":"\[DEFAULT|ASC|DESC\]"
+  "ratingSort":"[DEFAULT|ASC|DESC]"
 }
 ```
 
